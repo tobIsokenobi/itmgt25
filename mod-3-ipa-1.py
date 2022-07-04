@@ -110,9 +110,9 @@ def shift_by_letter(letter, letter_shift):
     if letter == ' ':
       boom = boom + letter
     elif  letter.isupper():
-      boom = boom + chr((ord(letter) + ((ord(shift)-65)%26) - 65) % 26 + 65)
+      boom = boom + chr((ord(letter) + ((ord(letter_shift)-65)%26) - 65) % 26 + 65)
     else:
-      boom = boom + chr((ord(letter) + ((ord(shift)-97)%26) - 97) % 26 + 97)
+      boom = boom + chr((ord(letter) + ((ord(letter_shift)-97)%26) - 97) % 26 + 97)
   
     return boom
 
@@ -218,7 +218,6 @@ def scytale_cipher(message, shift):
      a=a+1
      if len(chars) % shift == 0:
        break
-     break
     cipher, i = [], 0
     for i in range(len(chars)):
      i = ((i // shift) + (len(chars) // shift) * (i % shift))
