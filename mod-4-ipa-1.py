@@ -350,4 +350,32 @@ def eta(first_stop, second_stop, route_map):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    pass
+    boom = (first_stop, second_stop)
+    total_time = 0
+    if boom in list(route_map.keys()):
+        return route_map[boom]["travel_time_mins"]
+    elif first_stop == second_stop:
+        for same in list(route_map.values()):
+            total_time += same["travel_time_mins"]
+        return total_time
+    else:
+        map = list()
+        for b in list(route_map):
+            map.append(b[0])
+        wherenow = map.index(first_stop)
+        whereto = map.index(second_stop)
+        now = wherenow
+        bang = [wherenow]
+        while now != whereto:
+            now += 1
+            if now > len(route_map)-1:
+                now = 0
+            bang.append(now)
+        bang.pop()
+        stops = list()
+        x = list(route_map)
+        for stop in bang:
+            stops.append(x[stop])
+        for stop in stops:
+            total_time += route_map[stop]["travel_time_mins"]        
+        return(total_time)
