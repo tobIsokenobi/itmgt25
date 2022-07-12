@@ -53,15 +53,15 @@ def relationship_status(from_member, to_member, social_graph):
         value_res = str(bool(res))
         value_qes = str(bool(qes))
         if value_res == 'True' and value_qes == 'True':
-            print('friends')
+            return 'friends'
         elif value_res == 'False' and value_qes == 'True':
-            print('followed by')
+            return 'followed by'
         elif value_res == 'True' and value_qes == 'False':
-            print('follower')
+            return 'follower'
         elif value_res == 'False' and value_qes == 'False':
-            print('no relationship')
+            return 'no relationship'
         else:
-            print('Elevate')
+            return 'Elevate'
     elif from_member not in d:
         social_graph[from_member] = {'following':[]}
         a = social_graph[from_member]['following']
@@ -71,15 +71,15 @@ def relationship_status(from_member, to_member, social_graph):
         value_res = str(bool(res))
         value_qes = str(bool(qes))
         if value_res == 'True' and value_qes == 'True':
-            print('friends')
+            return 'friends'
         elif value_res == 'False' and value_qes == 'True':
-            print('followed by')
+            return 'followed by'
         elif value_res == 'True' and value_qes == 'False':
-            print('follower')
+            return 'follower'
         elif value_res == 'False' and value_qes == 'False':
-            print('no relationship')
+            return 'no relationship'
         else:
-            print('Elevate')
+            return 'Elevate'
     elif to_member not in d:
         social_graph[to_member] = {'following':[]}
         a = social_graph[from_member]['following']
@@ -89,15 +89,15 @@ def relationship_status(from_member, to_member, social_graph):
         value_res = str(bool(res))
         value_qes = str(bool(qes))
         if value_res == 'True' and value_qes == 'True':
-            print('friends')
+            return 'friends'
         elif value_res == 'False' and value_qes == 'True':
-            print('followed by')
+            return 'followed by'
         elif value_res == 'True' and value_qes == 'False':
-            print('follower')
+            return 'follower'
         elif value_res == 'False' and value_qes == 'False':
-            print('no relationship')
+            return 'no relationship'
         else:
-            print('Elevate')
+            return 'Elevate'
     else:
         a = social_graph[from_member]['following']
         res = [ele for ele in a if(ele in to_member)]
@@ -106,15 +106,15 @@ def relationship_status(from_member, to_member, social_graph):
         value_res = str(bool(res))
         value_qes = str(bool(qes))
         if value_res == 'True' and value_qes == 'True':
-            print('friends')
+            return 'friends'
         elif value_res == 'False' and value_qes == 'True':
-            print('followed by')
+            return 'followed by'
         elif value_res == 'True' and value_qes == 'False':
-            print('follower')
+            return 'follower'
         elif value_res == 'False' and value_qes == 'False':
-            print('no relationship')
+            return 'no relationship'
         else:
-            print('Elevate')
+            return 'Elevate'
 
 
 def tic_tac_toe(board):
@@ -161,23 +161,23 @@ def tic_tac_toe(board):
         duplistveri = all([ele == duplist[0] for ele in duplist])
         if h1result or h2result or h3result or v1result or v2result or v3result or updolistveri or duplistveri:
             if h1result is True:
-                print(board[0][0])
+                return board[0][0]
             elif h2result is True:
-                print(board[1][0])
+                return board[1][0]
             elif h3result is True:
-                print(board[2][0])
+                return board[2][0]
             elif v1result is True:
-                print(tupak[0][0])
+                return tupak[0][0]
             elif v2result is True:
-                print(tupak[1][0])
+                return tupak[1][0]
             elif v3result is True:
-                print(tupak[2][0])
+                return tupak[2][0]
             elif updolistveri is True:
-                print(updolist[0][0])
+                return updolist[0][0]
             elif duplistveri is True:
-                print(duplist[0][0])
+                return duplist[0][0]
             else:
-                print('NO WINNER')
+                return 'NO WINNER'
     elif a == 4:
         h1result = all(ele == board[0][0] for ele in board[0])
         h2result = all(ele == board[1][0] for ele in board[1])
@@ -197,27 +197,27 @@ def tic_tac_toe(board):
         duplistveri = all([ele == duplist[0] for ele in duplist])
         if h1result or h2result or h3result or h4result or v1result or v2result or v3result or v4result or updolistveri or duplistveri:
             if h1result is True:
-                print(board[0][0])
+                return board[0][0]
             elif h2result is True:
-                print(board[1][0])
+                return board[1][0]
             elif h3result is True:
-                print(board[2][0])
+                return board[2][0]
             elif h4result is True:
-                print(board[3][0])
+                return board[3][0]
             elif v1result is True:
-                print(tupak[0][0])
+                return tupak[0][0]
             elif v2result is True:
-                print(tupak[1][0])
+                return tupak[1][0]
             elif v3result is True:
-                print(tupak[2][0])
+                return tupak[2][0]
             elif v4result is True:
-                print(tupak[3][0])
+                return tupak[3][0]
             elif updolistveri is True:
-                print(updolist[0][0])
+                return updolist[0][0]
             elif duplistveri is True:
-                print(duplist[0][0])
+                return duplist[0][0]
             else:
-                print('NO WINNER')
+                return 'NO WINNER'
     elif a == 5:
         h1result = all(ele == board[0][0] for ele in board[0])
         h2result = all(ele == board[1][0] for ele in board[1])
@@ -239,31 +239,31 @@ def tic_tac_toe(board):
         duplistveri = all([ele == duplist[0] for ele in duplist])
         if h1result or h2result or h3result or h4result or h5result or v1result or v2result or v3result or v4result or v5result or updolistveri or duplistveri:
             if h1result is True:
-                print(board[0][0])
+                return board[0][0]
             elif h2result is True:
-                print(board[1][0])
+                return board[1][0]
             elif h3result is True:
-                print(board[2][0])
+                return board[2][0]
             elif h4result is True:
-                print(board[3][0])
+                return board[3][0]
             elif h5result is True:
-                print(board[4][0])
+                return board[4][0]
             elif v1result is True:
-                print(tupak[0][0])
+                return tupak[0][0]
             elif v2result is True:
-                print(tupak[1][0])
+                return tupak[1][0]
             elif v3result is True:
-                print(tupak[2][0])
+                return tupak[2][0]
             elif v4result is True:
-                print(tupak[3][0])
+                return tupak[3][0]
             elif v5result is True:
-                print(tupak[4][0])
+                return tupak[4][0]
             elif updolistveri is True:
-                print(updolist[0][0])
+                return updolist[0][0]
             elif duplistveri is True:
-                print(duplist[0][0])
+                return duplist[0][0]
             else:
-                print('NO WINNER')
+                return 'NO WINNER'
     elif a == 6:
         h1result = all(ele == board[0][0] for ele in board[0])
         h2result = all(ele == board[1][0] for ele in board[1])
@@ -287,37 +287,37 @@ def tic_tac_toe(board):
         duplistveri = all([ele == duplist[0] for ele in duplist])
         if h1result or h2result or h3result or h4result or h5result or h6result or v1result or v2result or v3result or v4result or v5result or v6result or updolistveri or duplistveri:
             if h1result is True:
-                print(board[0][0])
+                return board[0][0]
             elif h2result is True:
-                print(board[1][0])
+                return board[1][0]
             elif h3result is True:
-                print(board[2][0])
+                return board[2][0]
             elif h4result is True:
-                print(board[3][0])
+                return board[3][0]
             elif h5result is True:
-                print(board[4][0])
+                return board[4][0]
             elif h6result is True:
-                print(board[5][0])
+                return board[5][0]
             elif v1result is True:
-                print(tupak[0][0])
+                return tupak[0][0]
             elif v2result is True:
-                print(tupak[1][0])
+                return tupak[1][0]
             elif v3result is True:
-                print(tupak[2][0])
+                return tupak[2][0]
             elif v4result is True:
-                print(tupak[3][0])
+                return tupak[3][0]
             elif v5result is True:
-                print(tupak[4][0])
+                return tupak[4][0]
             elif v6result is True:
-                print(tupak[5][0])
+                return tupak[5][0]
             elif updolistveri is True:
-                print(updolist[0][0])
+                return updolist[0][0]
             elif duplistveri is True:
-                print(duplist[0][0])
+                return duplist[0][0]
             else:
-                print('NO WINNER')
+                return 'NO WINNER'
     else:
-        print('hello')
+        return 'hello'
 
 def eta(first_stop, second_stop, route_map):
     '''ETA. 
