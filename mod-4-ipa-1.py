@@ -178,6 +178,8 @@ def tic_tac_toe(board):
                 return duplist[0][0]
             else:
                 return 'NO WINNER'
+        else:
+            return 'NO WINNER'
     elif a == 4:
         h1result = all(ele == board[0][0] for ele in board[0])
         h2result = all(ele == board[1][0] for ele in board[1])
@@ -218,6 +220,8 @@ def tic_tac_toe(board):
                 return duplist[0][0]
             else:
                 return 'NO WINNER'
+        else:
+            return 'NO WINNER'
     elif a == 5:
         h1result = all(ele == board[0][0] for ele in board[0])
         h2result = all(ele == board[1][0] for ele in board[1])
@@ -264,6 +268,8 @@ def tic_tac_toe(board):
                 return duplist[0][0]
             else:
                 return 'NO WINNER'
+        else:
+            return 'NO WINNER'
     elif a == 6:
         h1result = all(ele == board[0][0] for ele in board[0])
         h2result = all(ele == board[1][0] for ele in board[1])
@@ -316,8 +322,10 @@ def tic_tac_toe(board):
                 return duplist[0][0]
             else:
                 return 'NO WINNER'
+        else:
+            return 'NO WINNER'
     else:
-        return 'hello'
+        return 'whatcanisayexceptyourewelcome'
 
 def eta(first_stop, second_stop, route_map):
     '''ETA. 
