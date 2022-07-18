@@ -120,22 +120,17 @@ def relationship_status(from_member, to_member, social_graph):
 def tic_tac_toe(board):
     '''Tic Tac Toe. 
     25 points.
-
     Tic Tac Toe is a common paper-and-pencil game. 
     Players must attempt to successfully draw a straight line of their symbol across a grid.
     The player that does this first is considered the winner.
-
     This function evaluates a tic tac toe board and returns the winner.
-
     Please see "assignment-4-sample-data.py" for sample data. The board will adhere
     to the same pattern. The board may by 3x3, 4x4, 5x5, or 6x6. The board will never
     have more than one winner. The board will only ever have 2 unique symbols at the same time.
-
     Parameters
     ----------
     board: list
         the representation of the tic-tac-toe board as a square list of lists
-
     Returns
     -------
     str
@@ -143,189 +138,32 @@ def tic_tac_toe(board):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    a = len(board)
-    if a == 3:
-        h1result = all(ele == board[0][0] for ele in board[0])
-        h2result = all(ele == board[1][0] for ele in board[1])
-        h3result = all(ele == board[2][0] for ele in board[2])
-        unpak = [x for x in zip(*board)]
-        tupak = [list(y) for y in unpak]
-        v1result = all(ele == tupak[0][0] for ele in tupak[0])
-        v2result = all(ele == tupak[1][0] for ele in tupak[1])
-        v3result = all(ele == tupak[2][0] for ele in tupak[2])
-        updo = []
-        updolist = [board[i][i] for i,v in enumerate(board)]
-        updolistveri = all([ele == updolist[0] for ele in updolist])
-        dup = []
-        duplist = [board[2-i][i] for i,v in enumerate(board)]
-        duplistveri = all([ele == duplist[0] for ele in duplist])
-        if h1result or h2result or h3result or v1result or v2result or v3result or updolistveri or duplistveri:
-            if h1result is True:
-                return board[0][0]
-            elif h2result is True:
-                return board[1][0]
-            elif h3result is True:
-                return board[2][0]
-            elif v1result is True:
-                return tupak[0][0]
-            elif v2result is True:
-                return tupak[1][0]
-            elif v3result is True:
-                return tupak[2][0]
-            elif updolistveri is True:
-                return updolist[0][0]
-            elif duplistveri is True:
-                return duplist[0][0]
-            else:
-                return 'NO WINNER'
-        else:
-            return 'NO WINNER'
-    elif a == 4:
-        h1result = all(ele == board[0][0] for ele in board[0])
-        h2result = all(ele == board[1][0] for ele in board[1])
-        h3result = all(ele == board[2][0] for ele in board[2])
-        h4result = all(ele == board[3][0] for ele in board[3])
-        unpak = [x for x in zip(*board)]
-        tupak = [list(y) for y in unpak]
-        v1result = all(ele == tupak[0][0] for ele in tupak[0])
-        v2result = all(ele == tupak[1][0] for ele in tupak[1])
-        v3result = all(ele == tupak[2][0] for ele in tupak[2])
-        v4result = all(ele == tupak[3][0] for ele in tupak[3])
-        updo = []
-        updolist = [board[i][i] for i,v in enumerate(board)]
-        updolistveri = all([ele == updolist[0] for ele in updolist])
-        dup = []
-        duplist = [board[3-i][i] for i,v in enumerate(board)]
-        duplistveri = all([ele == duplist[0] for ele in duplist])
-        if h1result or h2result or h3result or h4result or v1result or v2result or v3result or v4result or updolistveri or duplistveri:
-            if h1result is True:
-                return board[0][0]
-            elif h2result is True:
-                return board[1][0]
-            elif h3result is True:
-                return board[2][0]
-            elif h4result is True:
-                return board[3][0]
-            elif v1result is True:
-                return tupak[0][0]
-            elif v2result is True:
-                return tupak[1][0]
-            elif v3result is True:
-                return tupak[2][0]
-            elif v4result is True:
-                return tupak[3][0]
-            elif updolistveri is True:
-                return updolist[0][0]
-            elif duplistveri is True:
-                return duplist[0][0]
-            else:
-                return 'NO WINNER'
-        else:
-            return 'NO WINNER'
-    elif a == 5:
-        h1result = all(ele == board[0][0] for ele in board[0])
-        h2result = all(ele == board[1][0] for ele in board[1])
-        h3result = all(ele == board[2][0] for ele in board[2])
-        h4result = all(ele == board[3][0] for ele in board[3])
-        h5result = all(ele == board[4][0] for ele in board[4])
-        unpak = [x for x in zip(*board)]
-        tupak = [list(y) for y in unpak]
-        v1result = all(ele == tupak[0][0] for ele in tupak[0])
-        v2result = all(ele == tupak[1][0] for ele in tupak[1])
-        v3result = all(ele == tupak[2][0] for ele in tupak[2])
-        v4result = all(ele == tupak[3][0] for ele in tupak[3])
-        v5result = all(ele == tupak[4][0] for ele in tupak[4])
-        updo = []
-        updolist = [board[i][i] for i,v in enumerate(board)]
-        updolistveri = all([ele == updolist[0] for ele in updolist])
-        dup = []
-        duplist = [board[4-i][i] for i,v in enumerate(board)]
-        duplistveri = all([ele == duplist[0] for ele in duplist])
-        if h1result or h2result or h3result or h4result or h5result or v1result or v2result or v3result or v4result or v5result or updolistveri or duplistveri:
-            if h1result is True:
-                return board[0][0]
-            elif h2result is True:
-                return board[1][0]
-            elif h3result is True:
-                return board[2][0]
-            elif h4result is True:
-                return board[3][0]
-            elif h5result is True:
-                return board[4][0]
-            elif v1result is True:
-                return tupak[0][0]
-            elif v2result is True:
-                return tupak[1][0]
-            elif v3result is True:
-                return tupak[2][0]
-            elif v4result is True:
-                return tupak[3][0]
-            elif v5result is True:
-                return tupak[4][0]
-            elif updolistveri is True:
-                return updolist[0][0]
-            elif duplistveri is True:
-                return duplist[0][0]
-            else:
-                return 'NO WINNER'
-        else:
-            return 'NO WINNER'
-    elif a == 6:
-        h1result = all(ele == board[0][0] for ele in board[0])
-        h2result = all(ele == board[1][0] for ele in board[1])
-        h3result = all(ele == board[2][0] for ele in board[2])
-        h4result = all(ele == board[3][0] for ele in board[3])
-        h5result = all(ele == board[4][0] for ele in board[4])
-        h6result = all(ele == board[5][0] for ele in board[5])
-        unpak = [x for x in zip(*board)]
-        tupak = [list(y) for y in unpak]
-        v1result = all(ele == tupak[0][0] for ele in tupak[0])
-        v2result = all(ele == tupak[1][0] for ele in tupak[1])
-        v3result = all(ele == tupak[2][0] for ele in tupak[2])
-        v4result = all(ele == tupak[3][0] for ele in tupak[3])
-        v5result = all(ele == tupak[4][0] for ele in tupak[4])
-        v6result = all(ele == tupak[5][0] for ele in tupak[5])
-        updo = []
-        updolist = [board[i][i] for i,v in enumerate(board)]
-        updolistveri = all([ele == updolist[0] for ele in updolist])
-        dup = []
-        duplist = [board[5-i][i] for i,v in enumerate(board)]
-        duplistveri = all([ele == duplist[0] for ele in duplist])
-        if h1result or h2result or h3result or h4result or h5result or h6result or v1result or v2result or v3result or v4result or v5result or v6result or updolistveri or duplistveri:
-            if h1result is True:
-                return board[0][0]
-            elif h2result is True:
-                return board[1][0]
-            elif h3result is True:
-                return board[2][0]
-            elif h4result is True:
-                return board[3][0]
-            elif h5result is True:
-                return board[4][0]
-            elif h6result is True:
-                return board[5][0]
-            elif v1result is True:
-                return tupak[0][0]
-            elif v2result is True:
-                return tupak[1][0]
-            elif v3result is True:
-                return tupak[2][0]
-            elif v4result is True:
-                return tupak[3][0]
-            elif v5result is True:
-                return tupak[4][0]
-            elif v6result is True:
-                return tupak[5][0]
-            elif updolistveri is True:
-                return updolist[0][0]
-            elif duplistveri is True:
-                return duplist[0][0]
-            else:
-                return 'NO WINNER'
-        else:
-            return 'NO WINNER'
-    else:
-        return 'whatcanisayexceptyourewelcome'
+    result = "NO WINNER"
+    def boom(line):
+        check = set()
+        for a in line:
+            check.add(a)
+        if len(check) == 1:
+            wincombo = list(check)
+            if wincombo[0] != "":
+                return(str(wincombo[0]))
+    for hori in board:
+        if boom(hori) != None:
+            result = boom(hori)
+    for vert in list(zip(*board)):
+        if boom(vert) != None:
+            result = boom(vert)
+    updolist = []
+    for u in range(len(board)):
+        updolist.append(board[u][u])
+    if boom(updolist) != None:
+            result = boom(updolist)
+    duplist = []
+    for d in range(len(board)):
+        duplist.append(board[len(board)-1-d][d])
+    if boom(duplist) != None:
+            result = boom(duplist)
+    return result
 
 def eta(first_stop, second_stop, route_map):
     '''ETA. 
